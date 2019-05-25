@@ -1,31 +1,8 @@
-# Fun-with-Flames
+Gernerally, Many under 18 are eager to know their relation between them and their liked ones.
 
-sai="Y"
-while(sai=="y" or sai=="Y"):
-    a=input('Enter name of first person : ').strip()
-    b=input("Enter name of second person: ").strip()
-    a=[i.lower() for i in a if i!=" "]
-    b=[j.lower() for j in b if j!=" "]
-    x=a[:]
-    y=b[:]
-    for i in x:
-        for j in y:
-            if i==j and i in a and j in b:
-                a.remove(i)
-                b.remove(j)
-                break
-    #print(a,b)
-    count=len(a)+len(b)
-    flames=["Friendship","Love","Affection","Marriage","Enemies","Siblings"]
-    while(len(flames)!=1):
-        i=count%len(flames)
-        if i==0:
-            i=len(flames)
-        flames=flames[i:]+flames[:(i-1)]    
-    
-    #print(flames)
-    print("Relation is:",str(flames[0]))
-    print(end='\n')
-    print("Press 'Y' and hit enter to play again else just hit enter")
-    sai=input().strip()
+To know the relation we usually play flames and we determine the realtion between them.
+
+Playing that everytime is somewhat wasting time and time consuming, we do it twice whether we have done the counting correctly or not so here is a python implementation attached with this so that you can run your code by giving the names of the persons and find relation between them with in fraction of seconds.
+
+Most importent is this is not real relation it's just a funny game to satisfy the teens feelings.
     
