@@ -1,12 +1,16 @@
-
+# import tkinter module
 from tkinter import * 
 
+# create a GUI window
 root = Tk()
 
+# size of the window
 root.geometry("1000x600")
 
+# name of the window
 root.title("Flames")
 
+# Creation of frames
 Tops = Frame(root, width = 1600, relief = SUNKEN) 
 Tops.pack(side = TOP) 
 
@@ -19,15 +23,18 @@ f2.pack(side = TOP)
 f3 = Frame(root, width = 800, height = 700, relief = SUNKEN) 
 f3.pack(side = TOP) 
 
+# display name of the project
 lblInfo = Label(Tops, font = ('helvetica', 50, 'bold'), 
 		text = "FLAMES", fg = "Black", bd = 10, anchor='w')
 
 lblInfo.grid(row = 0, column = 0)
 
+# declaring the variables used 
 firstperson = StringVar()
 secondperson = StringVar()
 relation = StringVar()
 
+# implentation of logic for finding the relation
 def find():
     a=[i.lower() for i in firstperson.get() if i!=" "]
     b=[j.lower() for j in secondperson.get() if j!=" "]
@@ -51,15 +58,17 @@ def find():
     relation.set(flames[0])
     
 
+# command to exit the window
 def end():
     root.destroy()
 
+# command to reset the values of the entries
 def reset():
     firstperson.set("")
     secondperson.set("")
     relation.set("Click on Show Relation")
     
-
+# creation of lables, buttons, entries required 
 label1 = Label(f1, font = ('arial', 16, 'bold'), 
 				text = "Name of First Person:", bd = 16, anchor = "w") 
 				
